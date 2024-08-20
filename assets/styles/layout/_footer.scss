@@ -4,14 +4,27 @@ footer {
     padding: 65px 32px;
     color: $white;
 
+   
+ @media screen and (max-width: 680px) {
+        background: none;
+     }
     .footer-content {
         max-width: 1000px;
         margin:0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
+
+        @media screen and (max-width: 680px) {
+          grid-template-columns: 1fr;
+         }
+
         .left-part {
             padding-right: 30px;
             line-height: 30px;
+                
+            @media screen and (max-width: 680px) {
+                     display: none;
+         }
             h2 {
                 font-family: $font1;
                 font-size: 2.5rem;
@@ -29,6 +42,8 @@ footer {
             display: grid;
             grid-template-rows: 1fr 1fr;
 
+            
+
             h3{
                 font-size: 0.85rem;
             }
@@ -43,6 +58,8 @@ footer {
                     display: flex;
                     margin-top: 50px;
 
+                    h3 {@media screen and (max-width: 680px) {
+                        display: none;}}
                     ul {
                         @include alignChildren(space-around);
                         flex-wrap:wrap ;
