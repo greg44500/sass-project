@@ -1,0 +1,52 @@
+.section2 {
+    color:$white;
+    padding-bottom: 100px;
+    position:relative;
+
+    &::after{
+        content:"";
+        position: absolute;
+        height: 620px;
+        width: 100%;
+        background:url(../images/bg-menu-01.jpg) center/cover;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: -330px;
+    }
+    h2{
+        color:$color1;  
+        font-size: 2rem;
+        font-weight: 200;
+        font-family: $font1;
+        padding: 60px 0 30px ;
+    }
+    ul{
+        @include alignChildren(space-around);
+        width: 50%;
+        margin: 30px auto;
+        min-width: 500px;
+
+        li{
+            border-bottom: 1px solid $grey;
+            padding-bottom: 8px;
+        }
+    }
+    .meals {
+        background: $white;
+        color: $black;
+        width: 85%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-top: 4px solid $color1;
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        z-index:100;
+        position:relative;
+
+        .meal{
+            display: grid;
+            grid-template-columns: 25% 55% 25%;
+        }
+    }
+}
